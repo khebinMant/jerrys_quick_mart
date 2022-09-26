@@ -1,60 +1,60 @@
 # jerrys_quick_mart
-## Solution to jerrys quick mart
+## Solution to Jerry´s quick mart problem
 
 >Previous configuration
-### Program is writed on python then is necesary
-#### (1) Install a python version 3.8.1~
-#### (2) Its a console aplication.
-#### (3) All the files in the repository should be in the same folder
+### Program is codified on python so it´s necesary to:
+#### (1) Install python version 3.8.1~
+#### (2) Run like a console app.
+#### (3) Know that all the files in the repository should be in the same folder
 #### (4) The inventory is preloaded when the program is executed from a txt file "invetory.txt"
 
 >Solution description
 ### I decided to solve this on python because I think python has a flexible way to manipulate system files
-### The program works like a store cashier, with some menu and submenus
+### The program works like a store cashier, with the principal menu and its corresponding submenus
 
 ### Principal Menu
 >Sell products    =>Goes to select customer type
 
->Chech inventory  =>Print the Inventory
+>Chech inventory  =>Prints the Inventory
 
->Exit             =>Finish the program
+>Exit             =>Finishes the program
 
 ### Customer type 
-#### Allow's to select the type of customer because the price of the products that are gonna be selling depends of that
+#### Allows to select the type of customer because the price of the products depends on the type of customer.
 
 >Regular customer =>Goes to Sell Menu
 
 >Rewards member   =>Goes to Sell Menu
 
->Cancel           =>Return to Principal Menu
+>Cancel           =>Returns to Principal Menu
 
 ### Sell Menu
 
-> Add products to cart             =>Allow to add products to cart writing the products name and quantity that user want to buy
+> Add products to cart             =>Allows to add products to cart by writing the product's name and quantity that the user wants to buy
 
-> Delete products from the cart    =>Allow to delete products from the cart writing the uuid of the cart item
+> Delete products from the cart    =>Allows to delete products from the cart by writing the item´s uuid
 
-> Show products in cart            =>Display the current products in the cart
+> Show products in cart            =>Displays the current products in the cart
 
-> Check in                         =>Check In Menu
+> Check in                         =>Goes to Check in Menu
 
-> Cancel transaction               =>Return to Principal Menu
+> Cancel transaction               =>Returns to Principal Menu
 
 ### Check in Menu
 
->Enter the customer name           => Write the customer name
+>Enter the customer's name           => Writes the customer's name
 
 #Confirm Transaction
 
->Yes                               =>Cash Menu
+>Yes                               =>Goes to Cash Menu
 
->No					     =>Cancel transaction return´s to Principal Menu
+>No					     =>Cancels transaction and returns to Principal Menu
 
 #Cash Menu
 
 >Shows the cost of the transaction
 
->Enter the money			     =>Display transaction´s information and create a transaction information file .txt
+>Enter the payment       	     =>Displays transaction´s information and create a transaction information file .txt
 
 
 
