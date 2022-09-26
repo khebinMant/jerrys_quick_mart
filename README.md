@@ -14,7 +14,9 @@
 
 ### Principal Menu
 >Sell products    =>Goes to select customer type
+
 >Chech inventory  =>Print the Inventory
+
 >Exit             =>Finish the program
 
 ### Customer type 
