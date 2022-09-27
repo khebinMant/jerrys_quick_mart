@@ -164,9 +164,9 @@ def check_stock(product):
 def show_cart_products(cart_items):
     #This function display all the products selected to be bought
     print("****************************** PRODUCTS IN CART ******************************")
-    print("¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
+    print("______________________________________________________________________________")
     print("|   UUID   | Product  | Quantity | Unit Price | Subtotal |   Tax   |  Total  |")
-    print("¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
+    print("______________________________________________________________________________")
     for cart_item in cart_items:
         print(str(cart_item.uuid).rjust(10), str(cart_item.product.item).rjust(10) , str(cart_item.quantity).rjust(7), str(cart_item.unit_price).rjust(10), str(format(cart_item.sub_total,'.2f')).rjust(13) , str(format(cart_item.tax,'.2f')).rjust(11), str(format(cart_item.total,'.2f')).rjust(10))
 
@@ -174,9 +174,9 @@ def show_available_products():
     #This function display all the avaliable products
     #this helps to the user to choice the products more easily
     print("***************************** PRODUCTS ****************************")
-    print("¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
+    print("___________________________________________________________________")
     print("|   Item   | Quantity | Regular price | Member price | Tax status |")
-    print("¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
+    print("___________________________________________________________________")
     for product in products:
         print(str(product.item).rjust(10), str(product.quantity).rjust(5), str(product.regular_price).rjust(15), str(product.member_price).rjust(12), str(product.tax_status).rjust(20))
 
@@ -261,9 +261,9 @@ def show_transaction_on_console(transaction):
     print("****************************** Jerry´s Quick Mart ******************************")
     print("Date: " + str(transaction.date))
     print("TRANSACTION: "+transaction.uuid)
-    print("¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
+    print("________________________________________________________________________________")
     print("|   UUID   |  Product  | Quantity | Unit Price |  Subtotal |   Tax   |  Total  |")
-    print("¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
+    print("________________________________________________________________________________")
     for cart_item in transaction.cart_items:
         print(str(cart_item.uuid).rjust(10), str(cart_item.product.item).rjust(10), str(cart_item.quantity).rjust(10), str(cart_item.unit_price).rjust(12), str(format(cart_item.sub_total,'.2f')).rjust(12) , str(format(cart_item.tax,'.2f')).rjust(10), str(format(cart_item.total,'.2f')).rjust(9))
     
@@ -273,7 +273,7 @@ def show_transaction_on_console(transaction):
     print("TOTAL: $"+ str(format(transaction.total,'.2f')))
     print("CASH: $"+ str(format(transaction.cash,'.2f')))
     print("CHANGE: $"+str(format(transaction.change,'.2f')))
-    print("¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
+    print("________________________________________________________________________________")
     print("Your transaction has been created successfully!")
     print("The txt file has been created successfully!")
     input("Press any key to continue....")
@@ -366,9 +366,9 @@ def sell_menu():
     if customer_status == 'cancel':
         return
     else:
-        print("¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
+        print("__________________________________________________________________________")
         print("************************* Jerry´s Quick Mart *****************************")
-        print("¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
+        print("__________________________________________________________________________")
         while True:
             print("(1) Add products to cart")
             print("(2) Delete products from the cart")
@@ -417,10 +417,10 @@ def main():
     #This function just display the main menu
     option = 0
     initialize_data()
-    print("¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
+    print("__________________________________________________________________________")
     print("************************* Jerry´s Quick Mart *****************************")
     print("*************************      WELCOME       *****************************")
-    print("¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
+    print("__________________________________________________________________________")
     while True:
         print("(1) Sell products")
         print("(2) Check inventory")
