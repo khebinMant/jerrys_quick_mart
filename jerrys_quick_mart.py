@@ -105,7 +105,7 @@ def search_cart_product_by_uuid(cart_items):
     if len(cart_items)>0:
         check_find = False
         while check_find == False:   
-            cart_item_uuid = input("Enter product´s UUID you want to remove: ")
+            cart_item_uuid = input("Enter products UUID you want to remove: ")
             for cart_item in cart_items:
                 if cart_item.uuid == cart_item_uuid:
                     check_find = True
@@ -258,7 +258,7 @@ def show_transaction_on_console(transaction):
     # When  transaction is completed the 
     # program prints the transaction
     clean_console()
-    print("****************************** Jerry´s Quick Mart ******************************")
+    print("****************************** Jerrys Quick Mart ******************************")
     print("Date: " + str(transaction.date))
     print("TRANSACTION: "+transaction.uuid)
     print("________________________________________________________________________________")
@@ -285,7 +285,7 @@ def create_transaction_file(transaction):
     with open(transaction_name, 'w') as f:
         f.write(
             '''
-            ************************* Jerry´s Quick Mart *****************************
+            ************************* Jerrys Quick Mart *****************************
             Date: %s
             TRANSACTION: %s
             **************************************************************************
@@ -325,7 +325,7 @@ def check_in(cart_items,customer_status):
     #This function ask to the user all necesary information 
     # to create the transaction and give the option to cancell or not
     if len(cart_items)>0:
-        customer_name =  input("Enter customer´s name: ")
+        customer_name =  input("Enter customers name: ")
         customer = Customer(customer_name, customer_status)
         transaction = Transaction(str(uuid.uuid4())[:5], cart_items, date.today(),customer) 
         transaction.calculate_total_items()
@@ -336,7 +336,7 @@ def check_in(cart_items,customer_status):
         option = ''
         while option != 'YES' and option != 'NO':
             clean_console()
-            print("***** ARE YOU SURE TO CONTINUE WITH THE TRANSACTION? *******")
+            print("***** ARE YOU SURE TO CONTINUE WITH THE TRANSACTION *******")
             print("( YES ) Continue")
             print("( NO  ) Cancel transaction")
             option = input("Text your answer: ").upper()
@@ -367,7 +367,7 @@ def sell_menu():
         return
     else:
         print("__________________________________________________________________________")
-        print("************************* Jerry´s Quick Mart *****************************")
+        print("************************* Jerrys Quick Mart *****************************")
         print("__________________________________________________________________________")
         while True:
             print("(1) Add products to cart")
@@ -411,14 +411,14 @@ def sell_menu():
                 return_to_stock(cart_items)
                 break
             elif(option != '1' and option != '2' and option != '3' and option != '4' and option != '5'):
-                print("That option is not in the menú")
+                print("That option is not in the menu")
 
 def main():
     #This function just display the main menu
     option = 0
     initialize_data()
     print("__________________________________________________________________________")
-    print("************************* Jerry´s Quick Mart *****************************")
+    print("************************* Jerrys Quick Mart *****************************")
     print("*************************      WELCOME       *****************************")
     print("__________________________________________________________________________")
     while True:
@@ -439,6 +439,6 @@ def main():
         if(option == '3'):
             break
         elif(option != '1' and option != '2' and option != '3'):
-            print("That option is not in the menú")
+            print("That option is not in the menu")
 
 main()
